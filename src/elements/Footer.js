@@ -18,22 +18,17 @@ function Footer() {
       <>
         <footer className="footer-area footer-style-one-wrapper bg-color-footer bg_images tmp-section-gap">
           <div className="container">
-            <div className="row">
+            <div style={{ marginTop: "-70px" }} className="row">
               <div className="col-lg-12">
                 <div className="subscribe-area subscribe-style-1">
                   <div className="subscribe-inner">
-                    <div className="title">Subscribe to Newsletter</div>
-                    <form action="#" className="newsletter-form-1 mt--40">
-                      <input
-                        type="email"
-                        placeholder="Your Email"
-                        required=""
-                      />
-                      <button type="submit" className="tmp-btn btn-primary">
-                        Subscribe Now{" "}
+                    <div className="title">Need To work with us?</div>
+                    <div className="newsletter-form-1">
+                      <Link to="/contact" className="tmp-btn btn-primary">
+                        Contact Now{" "}
                         <i className="fa-sharp fa-regular fa-paper-plane" />
-                      </button>
-                    </form>
+                      </Link>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -49,8 +44,7 @@ function Footer() {
                     </div>
                     <p className="description">
                       Proinddd Pretium Sem Libero, Nec Aliquet Augue Lobortis
-                      In. Phasellus Nibh Quam, Molestie Id Est Sit Amet, Luctus
-                      Pulvinar
+                      In.
                     </p>
                     <div className="day-time">
                       <div className="icon">
@@ -114,13 +108,16 @@ function Footer() {
                     <h5 className="ft-title">Quick Link</h5>
                     <ul className="ft-link">
                       <li>
-                        <Link to={"/About"}>About Company</Link>
+                        <Link to={"/"}>Home</Link>
                       </li>
                       <li>
-                        <Link to={"/TeamOne"}>Meet Our Team</Link>
+                        <Link to={"/About"}>About</Link>
                       </li>
                       <li>
                         <Link to={"/Service"}>Our Services</Link>
+                      </li>
+                      <li>
+                        <Link to={"/Product"}>Our Products</Link>
                       </li>
                       <li>
                         <Link to={"/Blog"}>News &amp; Media</Link>
@@ -142,27 +139,23 @@ function Footer() {
                             <i className="fa-solid fa-envelope-open-text" />
                           </div>
                           <div className="content">
-                            <span>E-mail:</span>
-                            <Link to={`mailto:${contact?.email1}`}>
+                            <span>E-mail-1:</span>
+                            <a to={`mailto:${contact?.email1}`}>
                               {contact?.email1}
-                            </Link>
-                            <Link to={`mailto:${contact?.email2}`}>
-                              {contact?.email2}
-                            </Link>
+                            </a>
                           </div>
                         </div>
                       </li>
                       <li>
                         <div className="single-contact">
                           <div className="icon">
-                            <i className="fa-light fa-phone" />
+                            <i className="fa-solid fa-envelope-open-text" />
                           </div>
                           <div className="content">
-                            <span>Phone:</span>
-                            <Link to={`tel:${contact?.phone1}`}>
-                              {contact?.phone1}
-                            </Link>
-                            <br />
+                            <span>E-mail-2:</span>
+                            <a to={`mailto:${contact?.email2}`}>
+                              {contact?.email2}
+                            </a>
                           </div>
                         </div>
                       </li>
@@ -171,22 +164,23 @@ function Footer() {
                 </div>
                 <div className="col-lg-3 col-md-6">
                   <div className="single-footer-wrapper">
-                    <h5 className="ft-title">Who we are:</h5>
+                    <h5 className="ft-title">Call Now:</h5>
                     <ul className="ft-link">
                       <li className="ft-location">
-                        5919 Trussville Crossings Pkwy, new Dusting town,
-                        Austria
+                        5919 Trussville Crossings Pkwy.
                       </li>
+
                       <li>
                         <div className="single-contact">
                           <div className="icon">
-                            <i className="fa-solid fa-envelope-open-text" />
+                            <i className="fa-light fa-phone" />
                           </div>
                           <div className="content">
-                            <span>E-mail:</span>
-                            <Link to="mailto:webmaster@example.com">
-                              info@uibundle.com
-                            </Link>
+                            <span>Phone-1:</span>
+                            <a to={`tel:${contact?.phone1}`}>
+                              {contact?.phone1}
+                            </a>
+                            <br />
                           </div>
                         </div>
                       </li>
@@ -196,8 +190,10 @@ function Footer() {
                             <i className="fa-light fa-phone" />
                           </div>
                           <div className="content">
-                            <span>Phone:</span>
-                            <Link to="tel:+4733378901">+123 34598768</Link>
+                            <span>Phone-2:</span>
+                            <a to={`tel:${contact?.phone2}`}>
+                              {contact?.phone2}
+                            </a>
                           </div>
                         </div>
                       </li>
@@ -214,8 +210,10 @@ function Footer() {
               <div className="col-lg-12">
                 <div className="main-wrapper">
                   <p>
-                    © Copyright 2024. All Rights Reserved by{" "}
-                    <Link to="#">Webency</Link>
+                    © Copyright 2024. All Rights Reserved. Developed by{" "}
+                    <a href={"https://keradiontechnologies.com"}>
+                      Keradion Technologies.
+                    </a>
                   </p>
                 </div>
               </div>

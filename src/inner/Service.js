@@ -14,8 +14,8 @@ function Service() {
       <main>
         <Breadcrumb />
         <ServiceOne />
-        <WorkingProcessThree />
-        <Team />
+        {/* <WorkingProcessThree /> */}
+        {/* <Team /> */}
         <TestimonialsBrand />
         <Footer />
       </main>

@@ -98,7 +98,8 @@ function BlogColTwo() {
                             ></p>
                           </div>
                         </div>
-                      </div>
+                        </div>
+                        
                       <div className="col-lg-4 pl--50 pl_md--10 pl_sm--10 mt_md--50 mt_sm--50">
                         <div className="side-bar-details-page">
                           {/* single bar */}

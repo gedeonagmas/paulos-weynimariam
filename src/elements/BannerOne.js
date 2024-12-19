@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper-bundle.css";
@@ -29,6 +29,21 @@ const BannerOne = ({ id }) => {
       closeVideo();
     }
   };
+
+  const [isSmallScreen, setIsSmallScreen] = useState(false);
+
+  useEffect(() => {
+    const checkScreenSize = () => {
+      setIsSmallScreen(window.innerWidth < 768); // Adjust breakpoint as needed
+    };
+
+    checkScreenSize(); // Check screen size on mount
+    window.addEventListener("resize", checkScreenSize); // Listen for resize events
+
+    return () => {
+      window.removeEventListener("resize", checkScreenSize); // Cleanup on unmount
+    };
+  }, []);
 
   return (
     <div className="tmp-banner-swiper-one-area" id={id}>
@@ -77,7 +92,7 @@ const BannerOne = ({ id }) => {
               <div className="row">
                 <div className="col-xl-6">
                   <div
-                    style={{ marginTop: "-120px" }}
+                    style={isSmallScreen ? {} : { marginTop: "-120px" }}
                     className="banner-one-main-wrapper"
                   >
                     <div className="inner">
@@ -125,7 +140,7 @@ const BannerOne = ({ id }) => {
               <div className="row">
                 <div className="col-xl-6">
                   <div
-                    style={{ marginTop: "-120px" }}
+                    style={isSmallScreen ? {} : { marginTop: "-120px" }}
                     className="banner-one-main-wrapper"
                   >
                     <div className="inner">
@@ -173,7 +188,7 @@ const BannerOne = ({ id }) => {
               <div className="row">
                 <div className="col-xl-6">
                   <div
-                    style={{ marginTop: "-120px" }}
+                   style={isSmallScreen ? {} : { marginTop: "-120px" }}
                     className="banner-one-main-wrapper"
                   >
                     <div className="inner">

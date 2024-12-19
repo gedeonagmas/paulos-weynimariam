@@ -239,7 +239,7 @@ function Header() {
               <div className="information">
                 <span>Call Now</span>
                 <a href="#" className="number">
-                  +92 (8800) - 98670
+                  {contact?.phone1}
                 </a>
               </div>
             </div>
@@ -250,7 +250,7 @@ function Header() {
               <div className="information">
                 <span>Mail Us</span>
                 <a href="#" className="number">
-                  example@info.com
+                  {contact?.email1}
                 </a>
               </div>
             </div>
@@ -261,7 +261,7 @@ function Header() {
               <div className="information">
                 <span>Our Address</span>
                 <a href="#" className="number">
-                  66 Broklyant, New York 3269
+                  {contact?.address}
                 </a>
               </div>
             </div>
@@ -270,25 +270,49 @@ function Header() {
           {/* social area start */}
           <ul className="social-icons solid-social-icons rounded-social-icons">
             <li>
-              <a href="#">
-                <i className="fa-brands fa-facebook-f" />
-              </a>
+              {" "}
+              {contact?.facebookLink && (
+                <Link to={contact?.facebookLink}>
+                  <i className="fa-brands fa-facebook-f" />
+                </Link>
+              )}
             </li>
             <li>
-              <a href="#">
-                <i className="fa-brands fa-linkedin-in" />
-              </a>
+              {contact?.twitterLink && (
+                <Link to={contact?.twitterLink}>
+                  <i className="fa-brands fa-twitter" />
+                </Link>
+              )}
             </li>
             <li>
-              <a href="#">
-                <i className="fa-brands fa-twitter" />
-              </a>
+              {contact?.linkedInLink && (
+                <Link to={contact?.linkedInLink}>
+                  <i className="fa-brands fa-linkedin-in" />
+                </Link>
+              )}
             </li>
             <li>
-              <a href="#">
-                <i className="fa-brands fa-instagram" />
-              </a>
+              {contact?.instagramLink && (
+                <Link to={contact?.instagramLink}>
+                  <i className="fa-brands fa-instagram" />
+                </Link>
+              )}
             </li>
+            <li>
+              {" "}
+              {contact?.telegramLink && (
+                <Link to={contact?.telegramLink}>
+                  <i className="fa-brands fa-telegram" />
+                </Link>
+              )}
+            </li>
+            {/* <li>
+              {contact?.whatsUpLink && (
+                <Link to={contact?.whatsUpLink}>
+                  <i className="fa-brands fa-whatsapp" />
+                </Link>
+              )}
+            </li> */}
           </ul>
           {/* social area end */}
         </div>

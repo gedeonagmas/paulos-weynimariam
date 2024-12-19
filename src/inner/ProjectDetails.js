@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import HeaderInner from "../header/HeaderInner";
 import ProjectDetails from "./breadcrumb/ProjectDetails";
 import Footer from "../elements/Footer";
-import { useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import axios from "axios";
 
 function PortfolioSix() {
@@ -52,16 +52,19 @@ function PortfolioSix() {
               service && (
                 <>
                   <div className="row">
-                    <div className="col-lg-12">
-                      <div className="projects-details-inner">
+                    <div className="col-lg-8">
+                      <div className="blog-details-left-area border-bottom">
                         <div className="thumbnail position-relative">
                           <img
                             src={`${process.env.REACT_APP_API_URL}/storage/${service?.banner}`}
-                              alt="projects-details"
-                              style={{height:'500px',width:'100%'}}
+                            alt="projects-details"
+                            style={{ height: "500px", width: "100%" }}
                           />
                         </div>
-                        <div style={{marginTop:"50px"}} className="clients-projects-details">
+                        <div
+                          style={{ marginTop: "50px" }}
+                          className="clients-projects-details"
+                        >
                           <div className="projects-details-wrapper">
                             <h3 className="title">{service?.title}</h3>
                             <p
@@ -75,12 +78,15 @@ function PortfolioSix() {
                             <div className="row">
                               {JSON.parse(service?.images)?.map((e, i) => {
                                 return (
-                                  <div className="col-lg-6 col-md-6 gap-4 col-sm-12 col-12">
-                                    <div className="thumbnail">
+                                  <div className="col-lg-6">
+                                    <div className="thumbnail-50">
                                       <img
                                         src={`${process.env.REACT_APP_API_URL}/storage/${e}`}
                                         alt="project details"
-                                        style={{height:'300px',width:'100%'}}
+                                        style={{
+                                          height: "300px",
+                                          width: "100%",
+                                        }}
                                       />
                                     </div>
                                   </div>
@@ -93,6 +99,46 @@ function PortfolioSix() {
                                 __html: service?.details,
                               }}
                             ></p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="col-lg-4 pl--50 pl_md--10 pl_sm--10 mt_md--50 mt_sm--50">
+                      <div className="side-bar-details-page">
+                        {/* single bar */}
+
+                        {/* single bar end */}
+                        <div className="signle-side-bar recent-post">
+                          <div className="header">
+                            <h3 className="title">Other Products</h3>
+                          </div>
+                          <div className="body mt--50">
+                            {services?.map((e, i) => {
+                              return (
+                                <div className="single-blog-recent-post-sidebar">
+                                  <Link
+                                    to={`/ProductDetails?id=${e?.id}`}
+                                    className="thumbnail"
+                                  >
+                                    <img
+                                      src={`${process.env.REACT_APP_API_URL}/storage/${e?.banner}`}
+                                      alt="product"
+                                      style={{ height: "200px", width: "100%" }}
+                                    />
+                                    <div className="inner">
+                                      <span className="post-time">
+                                        <i className="fa-regular fa-clock" />
+                                        {new Date(
+                                          e?.created_at
+                                        )?.toDateString()}
+                                      </span>
+                                      <h6 className="title">{e?.title}</h6>
+                                    </div>
+                                  </Link>
+                                </div>
+                              );
+                            })}
                           </div>
                         </div>
                       </div>

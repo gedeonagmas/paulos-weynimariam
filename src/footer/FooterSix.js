@@ -164,8 +164,10 @@ function FooterSix() {
             <div className="col-lg-12">
               <div className="main-wrapper">
                 <p>
-                  © Copyright 2024. All Rights Reserved by{" "}
-                  <Link to={"#"}>Themes-Park</Link>
+                  © Copyright 2024. All Rights Reserved. Powered by{" "}
+                  <Link to={"https://keradiontechnologies.com"}>
+                    Keradion Technologies
+                  </Link>
                 </p>
               </div>
             </div>

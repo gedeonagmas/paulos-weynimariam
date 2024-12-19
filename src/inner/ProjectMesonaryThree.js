@@ -73,38 +73,49 @@ function PortfolioSix() {
                 </div>
               </div>
             </div>
-            <div className="row">
+            <div className="row g-5">
               {currentEvents?.map((item, i) => {
                 return (
-                  <div className="row g-5">
-                    <div className="flash grid-item-p element-item transition creative col-lg-4 col-md-6 col-sm-6">
-                      {/* single portfolio-item */}
-                      <div className="tmp-single-portfolio-item">
+                  <div
+                    key={i}
+                    className="flash grid-item-p element-item transition creative col-lg-4 col-md-6 col-sm-6"
+                  >
+                    {/* single portfolio-item */}
+                    <div className="tmp-single-portfolio-item">
+                      <Link
+                        to={`/ProductDetails?id=${item?.id}`}
+                        className="thumbnail"
+                      >
+                        <img
+                          src={`${process.env.REACT_APP_API_URL}/storage/${item.banner}`}
+                          alt="personal_portfolio"
+                          style={{ height: "250px", width: "100%" }}
+                        />
+                      </Link>
+                      <div className="tmp-inner-content">
+                        <Link to={`/ProductDetails?id=${item?.id}`}>
+                          <h2 className="title">{item.title}</h2>
+                        </Link>
+                      </div>
+                      <p
+                        className="disc mb--20"
+                        dangerouslySetInnerHTML={{
+                          __html:
+                            item?.description?.length > 100
+                              ? item?.description?.substring(0, 100)
+                              : item?.description,
+                        }}
+                      ></p>
+                      <h5>
                         <Link
                           to={`/ProductDetails?id=${item?.id}`}
-                          className="thumbnail"
+                          className="read-more-text"
                         >
-                          <img
-                            src={`${process.env.REACT_APP_API_URL}/storage/${item.banner}`}
-                            alt="personal_portfolio"
-                          />
+                          Read More <i className="fa fa-caret-right"></i>
                         </Link>
-                        <div className="tmp-inner-content">
-                          <Link to={`/ProductDetails?id=${item?.id}`}>
-                            <h2 className="title">{item.title}</h2>
-                          </Link>
-                        </div>
-                        <h5>
-                          <Link
-                            to={`/ProductDetails?id=${item?.id}`}
-                            className="read-more-text"
-                          >
-                            Read More <i className="fa fa-caret-right"></i>
-                          </Link>
-                        </h5>
-                      </div>
-                      {/* single portfolio-item end */}
+                      </h5>
                     </div>
+                    {/* single portfolio-item end */}
                   </div>
                 );
               })}

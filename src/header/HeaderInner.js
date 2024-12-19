@@ -1,6 +1,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import Nav from "./Nav";
 import { Link } from "react-router-dom";
+import axios from "axios";
 
 function HeaderInner() {
   const [isSticky, setIsSticky] = useState(false);
@@ -93,6 +94,17 @@ function HeaderInner() {
     setOpenMenu(openMenu === menuhome ? null : menuhome);
   };
 
+  const [contact, setContact] = useState();
+  useEffect(() => {
+    const fetchCategory = async () => {
+      const response2 = await axios.get(
+        `${process.env.REACT_APP_API_URL}/api/business-setup`
+      );
+      setContact(response2?.data);
+    };
+    fetchCategory();
+  }, []);
+
   return (
     <div>
       {/* tpm-header-area start */}
@@ -108,33 +120,52 @@ function HeaderInner() {
               <div className="col-lg-12">
                 <div className="header-top-inner">
                   <div className="left-information-area">
-                    <p className="left-top">
-                      Using user feedback to creat a million dollar
-                    </p>
+                    <div className="location-area">
+                      <i className="fa-light fa-phone" />
+                      <Link to="#">{contact?.phone1}</Link>
+                    </div>
                     <div className="location-area">
                       <i className="fa-light fa-location-dot" />
-                      <a href="#">California, TX 70240</a>
+                      <Link to="#">{contact?.address}</Link>
                     </div>
                     <div className="working-time">
                       <i className="fa-light fa-clock" />
-                      <p>Working Hours: 9:00 AM – 8:00 PM</p>
+                      <p>Working Hours: 2:00 AM – 11:00 PM</p>
                     </div>
                   </div>
                   <div className="right-header-top">
                     <div className="social-area-transparent">
                       <span>Follow on</span>
-                      <a href="#">
-                        <i className="fa-brands fa-facebook-f" />
-                      </a>
-                      <a href="#">
-                        <i className="fa-brands fa-twitter" />
-                      </a>
-                      <a href="#">
-                        <i className="fa-brands fa-linkedin-in" />
-                      </a>
-                      <a href="#">
-                        <i className="fa-brands fa-pinterest-p" />
-                      </a>
+                      {contact?.facebookLink && (
+                        <Link to={contact?.facebookLink}>
+                          <i className="fa-brands fa-facebook-f" />
+                        </Link>
+                      )}
+                      {contact?.twitterLink && (
+                        <Link to={contact?.twitterLink}>
+                          <i className="fa-brands fa-twitter" />
+                        </Link>
+                      )}
+                      {contact?.linkedInLink && (
+                        <Link to={contact?.linkedInLink}>
+                          <i className="fa-brands fa-linkedin-in" />
+                        </Link>
+                      )}
+                      {contact?.instagramLink && (
+                        <Link to={contact?.instagramLink}>
+                          <i className="fa-brands fa-instagram" />
+                        </Link>
+                      )}
+                      {contact?.telegramLink && (
+                        <Link to={contact?.telegramLink}>
+                          <i className="fa-brands fa-telegram" />
+                        </Link>
+                      )}
+                      {contact?.whatsUpLink && (
+                        <Link to={contact?.whatsUpLink}>
+                          <i className="fa-brands fa-whatsapp" />
+                        </Link>
+                      )}
                     </div>
                   </div>
                 </div>
@@ -156,9 +187,19 @@ function HeaderInner() {
                 <Nav />
                 {/* <a href="#" class="tmp-btn btn-primary">Get Consulting</a> */}
                 <div className="actions-area">
-                  <a href="#" className="tmp-btn btn-primary">
-                    Need Help?
-                  </a>
+                  <Link
+                    style={{
+                      height: "40px",
+                      marginRight: "20px",
+                      textAlign: "start",
+                    }}
+                    className="tmp-btn btn-primary"
+                    to="Contact"
+                  >
+                    <p style={{ marginTop: "-8px", color: "white" }}>
+                      Get Help?
+                    </p>
+                  </Link>
                   {/* <div class="menu-button" id="search">
                         <i class="fa-light fa-grid-2"></i>
                         </div> */}
