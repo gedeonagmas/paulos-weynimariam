@@ -13,7 +13,7 @@ function ProjectMesonary(props) {
             <div className="row">
                 <div className="col-lg-12">
                 <div className="breadcrumb-inner text-center">
-                    <h1 className="title split-collab">Recent Project</h1>
+                    <h1 className="title split-collab">Recent Products</h1>
                     <ul className="page-list">
                     <li className="tmp-breadcrumb-item">
                         <a href="/">Home</a>
@@ -21,7 +21,7 @@ function ProjectMesonary(props) {
                     <li className="icon">
                         <i className="fa-solid fa-angle-right" />
                     </li>
-                    <li className="tmp-breadcrumb-item active">Recent Project</li>
+                    <li className="tmp-breadcrumb-item active">Recent Products</li>
                     </ul>
                     <div className="circle-1" />
                 </div>

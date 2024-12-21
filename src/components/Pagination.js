@@ -16,38 +16,80 @@ const Pagination = ({ currentPage, totalPages, onPageChange }) => {
   };
 
   return (
-    <div className="pagination-wrapper mt_20 centred">
-      <div className="pagination flex items-center justify-center gap-2">
+    <div
+      className="pagination-wrapper"
+      style={{
+        marginTop: "20px",
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+      }}
+    >
+      <div
+        className="pagination"
+        style={{
+          display: "flex",
+          alignItems: "center",
+          gap: "8px",
+        }}
+      >
         {/* Previous Button */}
         {currentPage > 1 && (
           <Link
             href="#"
-            className="prev"
             onClick={() => onPageChange(currentPage - 1)}
+            style={{
+              padding: "4px 12px",
+              border: "1px solid #ccc",
+              borderRadius: "4px",
+              backgroundColor: "#f4f4f4",
+              color: "#333",
+              cursor: "pointer",
+              textDecoration: "none",
+              transition: "background-color 0.3s",
+            }}
+            onMouseEnter={(e) => (e.target.style.backgroundColor = "#e0e0e0")}
+            onMouseLeave={(e) => (e.target.style.backgroundColor = "#f4f4f4")}
           >
-            prev
+            Prev
           </Link>
         )}
 
         {/* Page Numbers */}
-        {getPageNumbers().map((number, i) => (
+        {getPageNumbers().map((number) => (
           <ul
-            key={i}
-            style={{ listStyleType: "none", padding: "0px", margin: "0px" }}
+            key={number}
+            style={{
+              listStyleType: "none",
+              padding: "0",
+              margin: "0",
+            }}
           >
             <li>
               <Link
                 href="#"
-                style={{
-                  background: number === currentPage ? "#f99a62" : "",
-                  color: number === currentPage ? "white" : "",
-                }}
-                className={`page-number hover:text-white ${
-                  number === currentPage
-                    ? "current bg-red hover:text-white"
-                    : ""
-                }`}
                 onClick={() => onPageChange(number)}
+                style={{
+                  padding: "4px 12px",
+                  border: "1px solid #ccc",
+                  borderRadius: "4px",
+                  textDecoration: "none",
+                  backgroundColor: number === currentPage ? "#f99a62" : "#fff",
+                  color: number === currentPage ? "#fff" : "#333",
+                  cursor: "pointer",
+                  fontWeight: number === currentPage ? "bold" : "normal",
+                  transition: "all 0.3s",
+                }}
+                onMouseEnter={(e) => {
+                  if (number !== currentPage) {
+                    e.target.style.backgroundColor = "#e0e0e0";
+                  }
+                }}
+                onMouseLeave={(e) => {
+                  if (number !== currentPage) {
+                    e.target.style.backgroundColor = "#fff";
+                  }
+                }}
               >
                 {number}
               </Link>
@@ -59,11 +101,21 @@ const Pagination = ({ currentPage, totalPages, onPageChange }) => {
         {currentPage < totalPages && (
           <Link
             href="#"
-            style={{ color: "#f99a62" }}
-            className="next hover:border-none "
             onClick={() => onPageChange(currentPage + 1)}
+            style={{
+              padding: "4px 12px",
+              border: "1px solid #ccc",
+              borderRadius: "4px",
+              backgroundColor: "#f4f4f4",
+              color: "#333",
+              cursor: "pointer",
+              textDecoration: "none",
+              transition: "background-color 0.3s",
+            }}
+            onMouseEnter={(e) => (e.target.style.backgroundColor = "#e0e0e0")}
+            onMouseLeave={(e) => (e.target.style.backgroundColor = "#f4f4f4")}
           >
-            next
+            Next
           </Link>
         )}
       </div>

@@ -18,7 +18,7 @@ function BreadcrumbSd(props) {
                     <i className="fa-solid fa-angle-right" />
                   </li>
                   <li className="tmp-breadcrumb-item active">
-                    Project Details
+                    Product Details
                   </li>
                 </ul>
                 <div className="circle-1" />

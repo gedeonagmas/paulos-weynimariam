@@ -65,7 +65,7 @@ function ServiceDetails() {
                             <img
                               src={`${process.env.REACT_APP_API_URL}/storage/${item.banner}`}
                               alt="Business Consulting Blog"
-                              style={{height:'300px',width:'100%'}}
+                              style={{ height: "300px", width: "100%" }}
                             />
                           </Link>
                         </div>
