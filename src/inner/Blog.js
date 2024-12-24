@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import HeaderInner from "../header/HeaderInner";
+import HeaderOne from "../header/HeaderOne";
 import BreadcrumbBlog from "../inner/breadcrumb/BreadcrumbBlog";
 import Footer from "../elements/Footer";
 import { Link } from "react-router-dom";
@@ -49,7 +49,7 @@ function ServiceDetails() {
   return (
     <div className="service-details">
       <div className="">
-        <HeaderInner />
+        <HeaderOne />
         <main>
           <BreadcrumbBlog />
           {/* latest blog area start */}

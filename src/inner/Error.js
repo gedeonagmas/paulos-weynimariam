@@ -1,5 +1,5 @@
 import React from 'react'
-import HeaderInner from '../header/HeaderInner';
+import HeaderOne from '../header/HeaderOne';
 import Error from '../inner/breadcrumb/Error';
 import Footer from '../elements/Footer';
 import { Link } from 'react-router-dom';
@@ -11,7 +11,7 @@ function ServiceDetails() {
   return (
     <div className='service-details'>
         <div className="">
-            <HeaderInner/>
+            <HeaderOne/>
             <main>
                 <Error/>
                     {/* tmp breadcrumb area start */}

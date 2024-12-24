@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from "react";
-import HeaderInner from "../header/HeaderInner";
+import HeaderOne from "../header/HeaderOne";
 import ProjectDetails from "./breadcrumb/ProjectDetails";
 import Footer from "../elements/Footer";
 import { Link, useLocation } from "react-router-dom";
 import axios from "axios";
+import Preloader from "../components/Preloader";
 
 function PortfolioSix() {
   const id = useLocation()?.search?.split("?id=")[1];
@@ -37,7 +38,7 @@ function PortfolioSix() {
 
   return (
     <div>
-      <HeaderInner />
+      <HeaderOne />
       <>
         <ProjectDetails title={service?.title} />
 
@@ -45,9 +46,9 @@ function PortfolioSix() {
         <div className="projects-details-area tmp-section-gap">
           <div className="container">
             {error && !loading && !service && <p>{error}</p>}
-            {!service && !loading && <p>No services found.</p>}
+            {!service && !loading && <p>No Products found.</p>}
             {loading ? (
-              <p>Loading...</p>
+              <Preloader />
             ) : (
               service && (
                 <>

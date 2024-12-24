@@ -85,69 +85,29 @@ const Header = ({ id }) => {
                       data-wow-duration=".4s"
                       data-wow-delay=".2s"
                     >
-                      Find out more about our <br /> business consulting
+                      About Paulos Weynimariam.
                     </h2>
                   </div>
                   <p className="description wow slideInUp">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Curabitur eget ornare quam. Sed sit amet sem sollicitudin,
-                    condimentum diam sed, consequat tellus. Quisque ac odio eget
-                    ligula gravida efficitur. Nunc facilisis sagittis magna, non
-                    venenatis mauris luctus quis.
+                    Welcome to Paulos Weynimariam, a leading name in the
+                    manufacturing and distribution of high-quality ventos. With
+                    a commitment to innovation and precision, we specialize in
+                    crafting products that meet the highest industry standards.
                   </p>
 
                   <p className="description wow slideInUp">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Curabitur eget ornare quam. Sed sit amet sem sollicitudin,
-                    condimentum diam sed, consequat tellus. Quisque ac odio eget
-                    ligula gravida efficitur. Nunc facilisis sagittis magna, non
-                    venenatis mauris luctus quis.
+                    Our expertise lies in providing tailored solutions for
+                    diverse industrial and commercial needs, ensuring
+                    durability, efficiency, and sustainability.
                   </p>
-                  <div
-                    className="single-progress-area progress-stye-one wow slideInUp"
-                    data-wow-duration=".4s"
-                    data-wow-delay=".2s"
-                  >
-                    <div className="progress-top">
-                      <p className="name">Consulting Service</p>
-                      <span className="parcent">85%</span>
-                    </div>
-                    <div className="progress">
-                      <div
-                        aria-valuemax="100"
-                        aria-valuemin="0"
-                        aria-valuenow="25"
-                        className="progress-bar wow fadeInLeft bg--primary"
-                        role="progressbar"
-                        style={{
-                          width: "85%",
-                        }}
-                      />
-                    </div>
-                  </div>
-                  <div
-                    className="single-progress-area progress-stye-one  wow slideInUp"
-                    data-wow-duration=".4s"
-                    data-wow-delay=".2s"
-                  >
-                    <div className="progress-top">
-                      <p className="name">Finance Consulting</p>
-                      <span className="parcent">66%</span>
-                    </div>
-                    <div className="progress">
-                      <div
-                        aria-valuemax="100"
-                        aria-valuemin="0"
-                        aria-valuenow="25"
-                        className="progress-bar wow fadeInLeft bg--primary"
-                        role="progressbar"
-                        style={{
-                          width: "66%",
-                        }}
-                      />
-                    </div>
-                  </div>
-                 
+                  <p className="description wow slideInUp">
+                    At Paulos Weynimariam, we pride ourselves on our dedication
+                    to excellence, customer satisfaction, and fostering
+                    long-term partnerships. Discover how we can bring value to
+                    your business with our state-of-the-art manufacturing
+                    processes and a team of experts ready to support you every
+                    step of the way.
+                  </p>
                 </div>
               </div>
             </div>

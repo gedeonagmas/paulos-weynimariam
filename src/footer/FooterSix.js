@@ -13,7 +13,7 @@ function FooterSix() {
                 <div className="single-footer-wrapper border-right mr--20">
                   <div className="logo">
                     <Link to={"/"}>
-                      <img src="assets/images/logo/logo-02.svg" alt="logo" />
+                      <img src="assets/images/logo/logo-01.png" alt="logo" />
                     </Link>
                   </div>
                   <p className="description">

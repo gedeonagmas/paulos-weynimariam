@@ -1,22 +1,34 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 function Nav() {
+  const path = useLocation()?.pathname;
+
   return (
     <div>
       <div className="header-nav main-nav-one">
         <nav>
           <ul className="parent-nav">
             <li className="">
-              <Link className="nav-link" to="/">
+              <Link
+                style={{ color: path === "/" ? "red" : "" }}
+                className="nav-link"
+                to="/"
+              >
                 <span className="rolling-text">
-                  <div  style={{fontWeight:'500', fontSize:'15px'}}  className="block">
+                  <div
+                    style={{ fontWeight: "500", fontSize: "15px" }}
+                    className="block"
+                  >
                     <span className="letter">H</span>
                     <span className="letter">O</span>
                     <span className="letter">M</span>
                     <span className="letter">E</span>
                   </div>
-                  <div  style={{fontWeight:'500', fontSize:'15px'}}  className="block">
+                  <div
+                    style={{ fontWeight: "500", fontSize: "15px" }}
+                    className="block"
+                  >
                     <span className="letter">H</span>
                     <span className="letter">O</span>
                     <span className="letter">M</span>
@@ -26,16 +38,26 @@ function Nav() {
               </Link>
             </li>
             <li>
-              <Link className="nav-link" to="/About">
+              <Link
+                style={{ color: path === "/About" ? "red" : "" }}
+                className="nav-link"
+                to="/About"
+              >
                 <span className="rolling-text">
-                  <div  style={{fontWeight:'500', fontSize:'15px'}}  className="block">
+                  <div
+                    style={{ fontWeight: "500", fontSize: "15px" }}
+                    className="block"
+                  >
                     <span className="letter">A</span>
                     <span className="letter">B</span>
                     <span className="letter">O</span>
                     <span className="letter">U</span>
                     <span className="letter">T</span>
                   </div>
-                  <div  style={{fontWeight:'500', fontSize:'15px'}}  className="block">
+                  <div
+                    style={{ fontWeight: "500", fontSize: "15px" }}
+                    className="block"
+                  >
                     <span className="letter">A</span>
                     <span className="letter">B</span>
                     <span className="letter">O</span>
@@ -46,9 +68,22 @@ function Nav() {
               </Link>
             </li>
             <li>
-              <Link className="nav-link" to="/Service">
+              <Link
+                style={{
+                  color:
+                    path === "/Service" ||
+                    path?.split("?")[0] === "/ServiceDetails"
+                      ? "red"
+                      : "",
+                }}
+                className="nav-link"
+                to="/Service"
+              >
                 <span className="rolling-text">
-                  <div  style={{fontWeight:'500', fontSize:'15px'}}  className="block">
+                  <div
+                    style={{ fontWeight: "500", fontSize: "15px" }}
+                    className="block"
+                  >
                     <span className="letter">S</span>
                     <span className="letter">E</span>
                     <span className="letter">R</span>
@@ -57,7 +92,10 @@ function Nav() {
                     <span className="letter">C</span>
                     <span className="letter">E</span>
                   </div>
-                  <div  style={{fontWeight:'500', fontSize:'15px'}}  className="block">
+                  <div
+                    style={{ fontWeight: "500", fontSize: "15px" }}
+                    className="block"
+                  >
                     <span className="letter">S</span>
                     <span className="letter">E</span>
                     <span className="letter">R</span>
@@ -71,9 +109,22 @@ function Nav() {
             </li>
 
             <li>
-              <Link className="nav-link" to="/Product">
+              <Link
+                style={{
+                  color:
+                    path === "/Product" ||
+                    path?.split("?")[0] === "/ProductDetails"
+                      ? "red"
+                      : "",
+                }}
+                className="nav-link"
+                to="/Product"
+              >
                 <span className="rolling-text">
-                  <div  style={{fontWeight:'500', fontSize:'15px'}}  className="block">
+                  <div
+                    style={{ fontWeight: "500", fontSize: "15px" }}
+                    className="block"
+                  >
                     <span className="letter">P</span>
                     <span className="letter">R</span>
                     <span className="letter">O</span>
@@ -82,7 +133,10 @@ function Nav() {
                     <span className="letter">C</span>
                     <span className="letter">T</span>
                   </div>
-                  <div  style={{fontWeight:'500', fontSize:'15px'}}  className="block">
+                  <div
+                    style={{ fontWeight: "500", fontSize: "15px" }}
+                    className="block"
+                  >
                     <span className="letter">P</span>
                     <span className="letter">R</span>
                     <span className="letter">O</span>
@@ -96,7 +150,16 @@ function Nav() {
             </li>
 
             <li>
-              <Link className="nav-link" to="/Blog">
+              <Link
+                style={{
+                  color:
+                    path === "/Blog" || path?.split("?")[0] === "/BlogDetails"
+                      ? "red"
+                      : "",
+                }}
+                className="nav-link"
+                to="/Blog"
+              >
                 <span className="rolling-text">
                   <div
                     style={{ fontWeight: "500", fontSize: "15px" }}
@@ -137,7 +200,11 @@ function Nav() {
               </Link>
             </li>
             <li>
-              <Link className="nav-link" to="/Contact">
+              <Link
+                style={{ color: path === "/Contact" ? "red" : "" }}
+                className="nav-link"
+                to="/Contact"
+              >
                 <span className="rolling-text">
                   <div
                     style={{ fontWeight: "500", fontSize: "15px" }}

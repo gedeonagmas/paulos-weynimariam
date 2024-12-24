@@ -135,9 +135,10 @@ function TestimonialsBrand() {
                                     {item?.position}
                                   </div>
                                 </div>
-                              </div><div className="icon icon-quote">
+                              </div>
+                              {/* <div className="icon icon-quote">
                                   <i className="fa-duotone fa-quote-left" />
-                                </div>
+                                </div> */}
                               <div className="thumbnail">
                                 <img
                                   src={`${process.env.REACT_APP_API_URL}/storage/${item.banner}`}

@@ -1,11 +1,7 @@
 import React, { useEffect, useState } from "react";
-import HeaderInner from "../header/HeaderInner";
+import HeaderOne from "../header/HeaderOne";
 import ProjectMesonary from "./breadcrumb/ProjectMesonary";
 import Footer from "../elements/Footer";
-import Col from "react-bootstrap/Col";
-import Nav from "react-bootstrap/Nav";
-import Row from "react-bootstrap/Row";
-import Tab from "react-bootstrap/Tab";
 import { Link } from "react-router-dom";
 import axios from "axios";
 import Pagination from "../components/Pagination";
@@ -51,7 +47,7 @@ function PortfolioSix() {
 
   return (
     <div>
-      <HeaderInner />
+      <HeaderOne />
       <>
         <ProjectMesonary />
         {/* rmp portfolio mesonary area */}

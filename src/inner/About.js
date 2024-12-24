@@ -1,5 +1,5 @@
 import React from "react";
-import HeaderInner from "../header/HeaderInner";
+import HeaderOne from "../header/HeaderOne";
 import Breadcrumb from "../inner/Breadcrumb";
 import AboutOne from "../elements/AboutOne";
 import WorkingProcess from "../elements/WorkingProcess";
@@ -10,9 +10,9 @@ import Footer from "../elements/Footer";
 function about() {
   return (
     <div className="index-one">
-      <HeaderInner />
+      <HeaderOne />
       <main>
-        <Breadcrumb />
+        <Breadcrumb type="about" />
         <AboutOne />
         <WorkingProcess />
         <Team />

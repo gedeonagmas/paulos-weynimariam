@@ -132,13 +132,10 @@ function ServiceOne({ type }) {
                 <div className="services-bottom">
                   <div className="services-bottom-inner">
                     <p className="description">
-                      Our success as consultants will depend on the essential
-                      rightness of the advice.
+                      Paulos Weynimariam specializes in producing high-quality
+                      Vento, offering a refreshing experience with every sip.
                     </p>
-                    <p className="description">
-                      Want to learn more About us?
-                      <button className="btn-simple">Click here</button>
-                    </p>
+                    
                   </div>
                 </div>
               </div>

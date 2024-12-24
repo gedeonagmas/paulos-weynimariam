@@ -1,9 +1,10 @@
 import React, { useState, useRef, useEffect } from "react";
 import Nav from "./Nav";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import axios from "axios";
 
 function HeaderInner() {
+  const path = useLocation()?.pathname;
   const [isSticky, setIsSticky] = useState(false);
 
   useEffect(() => {
@@ -194,7 +195,7 @@ function HeaderInner() {
                       textAlign: "start",
                     }}
                     className="tmp-btn btn-primary"
-                    to="Contact"
+                    to="/Contact"
                   >
                     <p style={{ marginTop: "-8px", color: "white" }}>
                       Get Help?
@@ -231,7 +232,7 @@ function HeaderInner() {
 
       <div id="side-hide" className={isMenuVisible ? "show" : ""}>
         <div className="top-area">
-          <a href="index.html" className="logo-area">
+          <a href="/" className="logo-area">
             <img src="assets/images/logo/logo-03.png" alt="logo" />
           </a>
           <div className="close-icon-area">
@@ -314,13 +315,19 @@ function HeaderInner() {
           <nav className="nav-main mainmenu-nav mt--30">
             <ul className="mainmenu metismenu" id="mobile-menu-active">
               <li className="">
-                <Link to="/" className="main" onClick={() => toggleMenu(1)}>
+                <Link
+                  style={{ color: path === "/" ? "red" : "" }}
+                  to="/"
+                  className="main"
+                  onClick={() => toggleMenu(1)}
+                >
                   Home
                 </Link>
               </li>
 
               <li className="">
                 <Link
+                  style={{ color: path === "/About" ? "red" : "" }}
                   to="/About"
                   className="main"
                   onClick={() => toggleMenu(1)}
@@ -330,6 +337,7 @@ function HeaderInner() {
               </li>
               <li className="">
                 <Link
+                  style={{ color: path === "/Service" ? "red" : "" }}
                   to="/Service"
                   className="main"
                   onClick={() => toggleMenu(1)}
@@ -339,6 +347,7 @@ function HeaderInner() {
               </li>
               <li className="">
                 <Link
+                  style={{ color: path === "/Product" ? "red" : "" }}
                   to="/Product"
                   className="main"
                   onClick={() => toggleMenu(1)}
@@ -347,13 +356,22 @@ function HeaderInner() {
                 </Link>
               </li>
               <li className="">
-                <Link to="/Blog" className="main" onClick={() => toggleMenu(1)}>
+                <Link
+                  style={{ color: path === "/Blog" ? "red" : "" }}
+                  to="/Blog"
+                  className="main"
+                  onClick={() => toggleMenu(1)}
+                >
                   News & Event
                 </Link>
               </li>
 
               <li>
-                <Link className="mobile-menu-link" to="/Contact">
+                <Link
+                  style={{ color: path === "/Contact" ? "red" : "" }}
+                  className="mobile-menu-link"
+                  to="/Contact"
+                >
                   Contact
                 </Link>
               </li>

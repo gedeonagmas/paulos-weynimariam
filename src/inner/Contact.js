@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
-import emailjs from "emailjs-com";
-import HeaderInner from "../header/HeaderInner";
+import HeaderOne from "../header/HeaderOne";
 import Contact from "../inner/breadcrumb/Contact";
 import Footer from "../elements/Footer";
 import axios from "axios";
@@ -67,7 +66,7 @@ function ContactPage() {
   return (
     <div className="service-details contact-page">
       <div className="">
-        <HeaderInner />
+        <HeaderOne />
         <main>
           <Contact />
           {/* tmp contact area */}
@@ -79,9 +78,8 @@ function ContactPage() {
                     <div className="section-head section-head-one-side text-align-left">
                       <span className="title">Contact Us</span>
                       <p className="description">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                        sed do eiusmod tempor incididunt ut labore et dolor
-                        magnaaliqua.
+                        Reach out to us for all your questions, feedback, and
+                        collaborations!
                       </p>
                     </div>
                     <ul className="ft-link ft-link-style-three">
@@ -169,9 +167,8 @@ function ContactPage() {
                     <div className="section-head section-head-one-side text-align-left">
                       <span className="title">GET IN TOUCH</span>
                       <p className="description">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                        sed do eiusmod tempor incididunt ut labore et dolor
-                        magnaaliqua.
+                        Get in touch with us for inquiries, orders, or
+                        support—we're here to help!
                       </p>
                     </div>
                     <div className="contact-form style-two">

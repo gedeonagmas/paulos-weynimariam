@@ -39,12 +39,11 @@ function Footer() {
                   <div className="single-footer-wrapper border-right mr--20">
                     <div className="logo">
                       <Link to="/">
-                        <img src="assets/images/logo/logo-02.svg" alt="logo" />
+                        <img src="assets/images/logo/logo-01.png" alt="logo" />
                       </Link>
                     </div>
                     <p className="description">
-                      Proinddd Pretium Sem Libero, Nec Aliquet Augue Lobortis
-                      In.
+                    A leading Company in the manufacturing and distribution of high-quality ventos. 
                     </p>
                     <div className="day-time">
                       <div className="icon">
@@ -167,7 +166,7 @@ function Footer() {
                     <h5 className="ft-title">Call Now:</h5>
                     <ul className="ft-link">
                       <li className="ft-location">
-                        5919 Trussville Crossings Pkwy.
+                       Let's Work to gather.
                       </li>
 
                       <li>

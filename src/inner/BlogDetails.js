@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from "react";
-import HeaderInner from "../header/HeaderInner";
+import HeaderOne from "../header/HeaderOne";
 import BreadcrumbBlog from "../inner//breadcrumb/BreadcrumbBlog";
 import Footer from "../elements/Footer";
 import { Link, useLocation } from "react-router-dom";
 import axios from "axios";
+import Preloader from "../components/Preloader";
 
 function BlogColTwo() {
   const id = useLocation()?.search?.split("?id=")[1];
@@ -38,16 +39,16 @@ function BlogColTwo() {
   return (
     <div className="service-details">
       <div className="">
-        <HeaderInner />
+        <HeaderOne />
         <main>
           <BreadcrumbBlog title={service?.eventName} />
           {/* tmp service section */}
           <div className="tmp-service-section tmp-section-gap">
             <div className="container">
               {error && !loading && !service && <p>{error}</p>}
-              {!service && !loading && <p>No services found.</p>}
+              {!service && !loading && <p>No News found.</p>}
               {loading ? (
-                <p>Loading...</p>
+                <Preloader />
               ) : (
                 service && (
                   <>
@@ -57,8 +58,8 @@ function BlogColTwo() {
                           <div className="thumbnail-top">
                             <img
                               src={`${process.env.REACT_APP_API_URL}/storage/${service?.banner}`}
-                                alt="Corporate_business"
-                                style={{height:'400px',width:'100%'}}
+                              alt="Corporate_business"
+                              style={{ height: "400px", width: "100%" }}
                             />
                           </div>
                           <div className="blog-details-discription">
@@ -82,7 +83,7 @@ function BlogColTwo() {
                                     <img
                                       src={`${process.env.REACT_APP_API_URL}/storage/${e}`}
                                       alt=""
-                                      style={{height:'300px',width:'100%'}}
+                                      style={{ height: "300px", width: "100%" }}
                                     />
                                   </div>
                                 </div>
@@ -98,8 +99,8 @@ function BlogColTwo() {
                             ></p>
                           </div>
                         </div>
-                        </div>
-                        
+                      </div>
+
                       <div className="col-lg-4 pl--50 pl_md--10 pl_sm--10 mt_md--50 mt_sm--50">
                         <div className="side-bar-details-page">
                           {/* single bar */}
@@ -120,7 +121,10 @@ function BlogColTwo() {
                                       <img
                                         src={`${process.env.REACT_APP_API_URL}/storage/${e?.banner}`}
                                         alt="blog-Post"
-                                        style={{height:'200px',width:'100%'}}
+                                        style={{
+                                          height: "200px",
+                                          width: "100%",
+                                        }}
                                       />
                                       <div className="inner">
                                         <span className="post-time">
@@ -137,10 +141,8 @@ function BlogColTwo() {
                                   </div>
                                 );
                               })}
-                              
                             </div>
                           </div>
-                          
                         </div>
                       </div>
                     </div>
@@ -149,7 +151,7 @@ function BlogColTwo() {
               )}
             </div>
           </div>
-       
+
           <Footer />
         </main>
       </div>

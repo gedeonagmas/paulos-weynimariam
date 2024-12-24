@@ -1,5 +1,5 @@
 import React from "react";
-import HeaderInner from "../header/HeaderInner";
+import HeaderOne from "../header/HeaderOne";
 import Project from "./breadcrumb/Project";
 import Footer from "../elements/Footer";
 import { Link } from "react-router-dom";
@@ -8,7 +8,7 @@ function Appoinment() {
   return (
     <div className="service-details">
       <div className="">
-        <HeaderInner />
+        <HeaderOne />
         <main>
           <Project />
           <div className="portfolio-area portfolio-style-three tmp-section-gap bg_image bg-image-none">

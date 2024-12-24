@@ -80,7 +80,7 @@ function Team() {
                     data-wow-delay=".1s"
                   >
                     <div className="single-team">
-                      <Link to={"/TeamDetails"} className="thumbnail">
+                      <Link to={"#"} className="thumbnail">
                         <img
                           src={`${process.env.REACT_APP_API_URL}/storage/${item.image}`}
                           alt="Corporate team"
@@ -89,7 +89,7 @@ function Team() {
                       </Link>
                       <div className="content">
                         <div className="team-name content-with-bg">
-                          <Link to={"/TeamDetails"} className="name-area">
+                          <Link to={"#"} className="name-area">
                             <h6 className="name">{item?.full_name}</h6>
                           </Link>
                           <div className="designation">{item?.position}</div>

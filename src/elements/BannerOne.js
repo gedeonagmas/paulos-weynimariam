@@ -97,17 +97,19 @@ const BannerOne = ({ id }) => {
                   >
                     <div className="inner">
                       <span className="sub-title">
-                        Business Consulting Agency
+                        Vento Manufacturing Company
                       </span>
-                      <h1 className="title">Business consulting solution</h1>
+                      <h1 className="title">
+                        Built for Quality, Driven by Precision
+                      </h1>
                       <p className="disc">
-                        We help small startups grow from idea to millions of
-                        users.  <br />we can also
-                        automate your marketing and customer service.
+                        Indulge in the rich taste of Vento, expertly brewed{" "}
+                        <br /> with the finest ingredients for a refreshingly
+                        smooth experience that stands out.
                       </p>
                       <div className="button-area-banner-one">
-                        <Link to={"Service"} className="tmp-btn btn-primary">
-                          Get Started Now
+                        <Link to={"/contact"} className="tmp-btn btn-primary">
+                          Let's Work To Gather
                         </Link>
                       </div>
                     </div>
@@ -145,17 +147,20 @@ const BannerOne = ({ id }) => {
                   >
                     <div className="inner">
                       <span className="sub-title">
-                        Business Consulting Agency
+                        Refreshing Excellence in Every Sip
                       </span>
-                      <h1 className="title">Corporate Solutions Business</h1>
+                      <h1 className="title">
+                        Quality, and Flavor in Every Bottle
+                      </h1>
                       <p className="disc">
-                        We help small startups grow from idea to millions of
-                        users. <br /> we can also
-                        automate your marketing and customer service.
+                        Experience the art of Vento-making, where tradition
+                        meets innovation <br /> to deliver a beverage that’s
+                        bold in flavor, smooth in taste, and crafted to
+                        perfection.
                       </p>
                       <div className="button-area-banner-one">
-                        <Link to={"Service"} className="tmp-btn btn-primary">
-                          Get Started Now
+                        <Link to={"/contact"} className="tmp-btn btn-primary">
+                          Let's Work To Gather
                         </Link>
                       </div>
                     </div>
@@ -188,22 +193,22 @@ const BannerOne = ({ id }) => {
               <div className="row">
                 <div className="col-xl-6">
                   <div
-                   style={isSmallScreen ? {} : { marginTop: "-120px" }}
+                    style={isSmallScreen ? {} : { marginTop: "-120px" }}
                     className="banner-one-main-wrapper"
                   >
                     <div className="inner">
                       <span className="sub-title">
-                        Business Consulting Agency
+                        Vento, Perfected for You
                       </span>
-                      <h1 className="title">Powering Business Growth</h1>
+                      <h1 className="title">Where Flavor Meets Quality</h1>
                       <p className="disc">
-                        We help small startups grow from idea to millions of
-                        users.  <br />we can also
-                        automate your marketing and customer service.
+                        From brewing to bottling, we craft each Vento with care,
+                        ensuring <br /> every sip is a moment of pure
+                        refreshment and unmatched quality.
                       </p>
                       <div className="button-area-banner-one">
-                        <Link to={"Service"} className="tmp-btn btn-primary">
-                          Get Started Now
+                        <Link to={"/contact"} className="tmp-btn btn-primary">
+                          Let's Work To Gather
                         </Link>
                       </div>
                     </div>

@@ -48,11 +48,11 @@ function WorkingProcess() {
                     </div>
                   </div>
                   <div className="services-content services-content-style-1 text-center">
-                    <h5 className="title">Meeting Client</h5>
+                    <h5 className="title">Fermentation</h5>
                     <p className="description">
-                      Continue indulged speaking the was out horrible for
-                      domestic position. Seeing rather her you not esteem men
-                      settle genius excuse.
+                      We carefully select premium ingredients and follow a
+                      traditional brewing process, allowing the flavors to
+                      develop naturally through fermentation.
                     </p>
                   </div>
                 </div>
@@ -78,11 +78,10 @@ function WorkingProcess() {
                     </div>
                   </div>
                   <div className="services-content services-content-style-1 text-center">
-                    <h5 className="title">Project Strategy</h5>
+                    <h5 className="title">Quality Testing & Refinement</h5>
                     <p className="description">
-                      Continue indulged speaking the was out horrible for
-                      domestic position. Seeing rather her you not esteem men
-                      settle genius excuse.
+                      Every batch is rigorously tested to ensure consistency,
+                      taste, and quality meet our high standards.
                     </p>
                   </div>
                 </div>
@@ -108,11 +107,9 @@ function WorkingProcess() {
                     </div>
                   </div>
                   <div className="services-content services-content-style-1 text-center">
-                    <h5 className="title">Campaign Design</h5>
+                    <h5 className="title">Bottling & Distribution</h5>
                     <p className="description">
-                      Continue indulged speaking the was out horrible for
-                      domestic position. Seeing rather her you not esteem men
-                      settle genius excuse.
+                    Once perfected, Vento is bottled in eco-friendly packaging and distributed to bring refreshing excellence to your table.
                     </p>
                   </div>
                 </div>

@@ -7,8 +7,6 @@ import Blog from "./inner/Blog";
 import BlogDetails from "./inner/BlogDetails";
 import ProjectMesonaryThree from "./inner/ProjectMesonaryThree";
 import ProjectDetails from "./inner/ProjectDetails";
-import TeamOne from "./inner/TeamOne";
-import TeamDetails from "./inner/TeamDetails";
 import FaqOne from "./inner/FaqOne";
 import Error from "./inner/Error";
 import Contact from "./inner/Contact";
@@ -39,8 +37,6 @@ function App() {
           <Route path="/BlogDetails" element={<BlogDetails />}></Route>
           <Route path="/Product" element={<ProjectMesonaryThree />}></Route>
           <Route path="/ProductDetails" element={<ProjectDetails />}></Route>
-          <Route path="/TeamOne" element={<TeamOne />}></Route>
-          <Route path="/TeamDetails" element={<TeamDetails />}></Route>
           <Route path="/FaqOne" element={<FaqOne />}></Route>
           <Route path="/Error" element={<Error />}></Route>
           <Route path="/Contact" element={<Contact />}></Route>

@@ -1,10 +1,11 @@
 import React, { useState, useRef, useEffect } from "react";
 import Nav from "./Nav";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import Form from "react-bootstrap/Form";
 import axios from "axios";
 
 function Header() {
+  const path = useLocation()?.pathname;
   const [isSticky, setIsSticky] = useState(false);
 
   useEffect(() => {
@@ -23,7 +24,7 @@ function Header() {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
-
+  console.log(path?.split("?")[0], "path");
   const [isOpen, setIsOpen] = useState(false);
   const pickerRef = useRef(null);
 
@@ -215,7 +216,7 @@ function Header() {
 
       <div id="side-hide" className={isMenuVisible ? "show" : ""}>
         <div className="top-area">
-          <a href="index.html" className="logo-area">
+          <a href="/" className="logo-area">
             <img src="assets/images/logo/logo-03.png" alt="logo" />
           </a>
           <div className="close-icon-area">
@@ -225,12 +226,11 @@ function Header() {
           </div>
         </div>
         <div className="body">
-          <h5 className="title">
-            Transforming your ideas into digital reality
-          </h5>
+          <h5 className="title">Experience the Taste of Perfection</h5>
           <p className="disc">
-            Sed ut perspiciatis unde omnis natus error voluptatem santium
-            doloremque laudantium, totam rem aperiam, eaque.
+            Enjoy the bold, refreshing flavor of Vento, expertly crafted with
+            premium ingredients to bring you a drink that's perfect for any
+            occasion.
           </p>
           <div className="short-contact-area-side-collups">
             {/* single contact information */}
@@ -322,13 +322,19 @@ function Header() {
           <nav className="nav-main mainmenu-nav mt--30">
             <ul className="mainmenu metismenu" id="mobile-menu-active">
               <li className="">
-                <Link to="/" className="main" onClick={() => toggleMenu(1)}>
+                <Link
+                  style={{ color: path === "/" ? "red" : "" }}
+                  to="/"
+                  className="main"
+                  onClick={() => toggleMenu(1)}
+                >
                   Home
                 </Link>
               </li>
 
               <li className="">
                 <Link
+                  style={{ color: path === "/About" ? "red" : "" }}
                   to="/About"
                   className="main"
                   onClick={() => toggleMenu(1)}
@@ -338,6 +344,13 @@ function Header() {
               </li>
               <li className="">
                 <Link
+                  style={{
+                    color:
+                      path === "/Service" ||
+                      path?.split("?")[0] === "/ServiceDetails"
+                        ? "red"
+                        : "",
+                  }}
                   to="/Service"
                   className="main"
                   onClick={() => toggleMenu(1)}
@@ -347,6 +360,13 @@ function Header() {
               </li>
               <li className="">
                 <Link
+                  style={{
+                    color:
+                      path === "/Product" ||
+                      path?.split("?")[0] === "/ProductDetails"
+                        ? "red"
+                        : "",
+                  }}
                   to="/Product"
                   className="main"
                   onClick={() => toggleMenu(1)}
@@ -355,13 +375,27 @@ function Header() {
                 </Link>
               </li>
               <li className="">
-                <Link to="/Blog" className="main" onClick={() => toggleMenu(1)}>
+                <Link
+                  style={{
+                    color:
+                      path === "/Blog" || path?.split("?")[0] === "/BlogDetails"
+                        ? "red"
+                        : "",
+                  }}
+                  to="/Blog"
+                  className="main"
+                  onClick={() => toggleMenu(1)}
+                >
                   News & Event
                 </Link>
               </li>
 
               <li>
-                <Link className="mobile-menu-link" to="/Contact">
+                <Link
+                  style={{ color: path === "/Contact" ? "red" : "" }}
+                  className="mobile-menu-link"
+                  to="/Contact"
+                >
                   Contact
                 </Link>
               </li>

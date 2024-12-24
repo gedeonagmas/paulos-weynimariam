@@ -6,15 +6,13 @@ import ServiceOne from "../elements/ServiceOne";
 import WorkingProcess from "../elements/WorkingProcess";
 import FunFacts from "../elements/FunFacts";
 import Team from "../elements/Team";
-import Portfolio from "../elements/Portfolio";
 import FaqOne from "../elements/FaqOne";
 import TestimonialsBrand from "../elements/TestimonialsBrand";
-import Contact from "../elements/Contact";
 import Blog from "../elements/Blog";
 import Footer from "../elements/Footer";
-import SideBar from "../components/SideBar";
+import Portfolio from "../elements/Portfolio";
 
-function Home() {
+function Home() { 
   return (
     <div className="index-one">
       <HeaderOne />
@@ -31,7 +29,7 @@ function Home() {
         {/* <Contact /> */}
         <Blog />
         <Footer />
-        <SideBar />
+        {/* <SideBar /> */}
       </main>
     </div>
   );

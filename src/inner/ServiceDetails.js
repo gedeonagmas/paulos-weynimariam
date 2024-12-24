@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from "react";
-import HeaderInner from "../header/HeaderInner";
+import HeaderOne from "../header/HeaderOne";
 import BreadcrumbSd from "../inner//breadcrumb/BreadcrumbSd";
 import Footer from "../elements/Footer";
 import Accordion from "react-bootstrap/Accordion";
 import { Link, useLocation } from "react-router-dom";
 import axios from "axios";
+import Preloader from "../components/Preloader";
 
 function ServiceDetails() {
   const id = useLocation()?.search?.split("?id=")[1];
@@ -40,7 +41,7 @@ function ServiceDetails() {
   return (
     <div className="service-details">
       <div className="">
-        <HeaderInner />
+        <HeaderOne />
         <main>
           <BreadcrumbSd title={service?.serviceName} />
           {/* tmp service section */}
@@ -49,7 +50,7 @@ function ServiceDetails() {
               {error && !loading && !service && <p>{error}</p>}
               {!service && !loading && <p>No services found.</p>}
               {loading ? (
-                <p>Loading...</p>
+                <Preloader />
               ) : (
                 service && (
                   <>

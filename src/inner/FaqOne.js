@@ -1,5 +1,5 @@
 import React from 'react'
-import HeaderInner from '../header/HeaderInner';
+import HeaderOne from '../header/HeaderOne';
 import Faq from './breadcrumb/Faq';
 import Footer from '../elements/Footer';
 import Accordion from 'react-bootstrap/Accordion';
@@ -10,7 +10,7 @@ import Accordion from 'react-bootstrap/Accordion';
 function OurPricing() {
   return (
     <div>
-        <HeaderInner/>
+        <HeaderOne/>
             <Faq/>
             {/* Tmp FAQ area Start  */}
             <div className="faq-area faq-style-one faq-bg-image bg_image tmp-section-gap mt-dec--180">

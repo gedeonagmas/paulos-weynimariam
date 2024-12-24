@@ -9,7 +9,7 @@ const CounterUp = ({ end, className }) => {
 
   const countUpRef = useRef(null);
 
-  useEffect(() => {
+  useEffect(() => {  
     if (inView) {
       const countUp = new CountUp(countUpRef.current, end, {
         duration: 1, // Duration of the counting animation
