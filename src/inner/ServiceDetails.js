@@ -122,7 +122,7 @@ function ServiceDetails() {
                             </div>
                           </div>
                           {/* single bar */}
-                          <div className="signle-side-bar call-to-action">
+                          {/* <div className="signle-side-bar call-to-action">
                             <div className="easy-call-to-action">
                               <div className="icon-center-call">
                                 <i className="fa-light fa-phone" />
@@ -134,7 +134,7 @@ function ServiceDetails() {
                               </p>
                               <a href="/contact">Contact</a>
                             </div>
-                          </div>
+                          </div> */}
                         </div>
                       </div>
                     </div>
